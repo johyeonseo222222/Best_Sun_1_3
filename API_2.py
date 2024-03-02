@@ -1,4 +1,4 @@
-# -*- coding: cp949 -*- # 파일의 인코딩형식을 첫머리에 명시해놓음으로써 인코딩 오류를 방지
+# -*- coding: utf-8 -*-   # 파일 인코딩 형식을 파일 첫머리에 명시해주어 인코딩 오류를 방지함
 
 import pandas as pd
 from haversine import haversine # pip install 필요
@@ -121,8 +121,8 @@ while start_date <= end_date:
 
     # 전처리 함수 호출
 
-    input_path_weather = fr"D:\hyeonseo\Battery_Charging_Algorithm\Battery_Charge_V3\Battery_Charge_V3\API\output_Weather_{start_date_str}_file_pre.csv" # 전처리 이전의  종관기상데이터 경로
-    output_path_weather = fr"D:\hyeonseo\Battery_Charging_Algorithm\Battery_Charge_V3\Battery_Charge_V3\API\output_Weather_{start_date_str}_file.csv"  # 전처리 완료한 종관기상데이터 경로
+    input_path_weather = fr"C:\Users\user1\Desktop\Battery_Charging_Algorithm\API\Weather_{start_date_str}_file_pre.csv" # 전처리 이전의  종관기상데이터 경로
+    output_path_weather = fr"C:\Users\user1\Desktop\Battery_Charging_Algorithm\API\Weather_{start_date_str}_file.csv"  # 전처리 완료한 종관기상데이터 경로
 
 
     try:
@@ -194,8 +194,8 @@ def preprocess_forecast_data(input_path, output_path): # 파일 전처리 하는 함수 �
     df_forecast_API.to_csv(output_path, index = False) # 전처리 완료. 파일 내보내기.
 
 
-input_path_forecast = fr"D:\hyeonseo\Battery_Charging_Algorithm\Battery_Charge_V3\Battery_Charge_V3\API\output_forecast_{end_date_str}_pre.csv" # 전처리 이전 예보API데이터 경로
-output_path_forecast = fr"D:\hyeonseo\Battery_Charging_Algorithm\Battery_Charge_V3\Battery_Charge_V3\API\output_forecast_{end_date_str}.csv" #전처리이후 예보API데이터 경로
+input_path_forecast = fr"C:\Users\user1\Desktop\Battery_Charging_Algorithm\API\forecast_{end_date_str}_pre.csv" # 전처리 이전 예보API데이터 경로
+output_path_forecast = fr"C:\Users\user1\Desktop\Battery_Charging_Algorithm\API\forecast_{end_date_str}.csv" #전처리이후 예보API데이터 경로
 
 
 try:

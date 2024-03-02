@@ -1,4 +1,4 @@
-# -*- coding: cp949 -*-   # 파일 인코딩 형식을 파일 첫머리에 명시해주어 인코딩 오류를 방지함
+# -*- coding: utf-8 -*-   # 파일 인코딩 형식을 파일 첫머리에 명시해주어 인코딩 오류를 방지함
 
 import os 
 import sys
@@ -89,9 +89,9 @@ def scheduled_job(file_path):
                first_api_input='01e9193c9c3f6b3631db3612599f6246', 
                second_api_input='ghBQh0IXRimQUIdCFzYp4w')
 
-file_path = r"D:\hyeonseo\Battery_Charging_Algorithm\Battery_Charge_V3\Battery_Charge_V3\Battery_Charging_1_3\ver1_3\Auto_Script.py"
+file_path = r"C:\Users\user1\Desktop\Battery_Charging_Algorithm\Auto_Script.py"
 
-schedule.every().day.at("20:30").do(scheduled_job, file_path=file_path)
+schedule.every().day.at("21:30").do(scheduled_job, file_path=file_path)
 
 while True:
     # 파일 경로가 유효하지 않으면 루프 중단

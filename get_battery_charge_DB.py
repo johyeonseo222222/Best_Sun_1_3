@@ -1,4 +1,4 @@
-# -*- coding: cp949 -*-   # 파일 인코딩 형식을 파일 첫머리에 명시해주어 인코딩 오류를 방지함
+# -*- coding: utf-8 -*-   # 파일 인코딩 형식을 파일 첫머리에 명시해주어 인코딩 오류를 방지함
 
 import numpy as np
 import pandas as pd
@@ -99,7 +99,7 @@ print(end_date)
 # 반복문을 통해 종관기상데이터 파일에서 종관기상데이터를 하나의 변수에 추가
 while start_date <= end_date:
     start_date_str = start_date.strftime('%Y%m%d')
-    observation_data_path = fr"D:\hyeonseo\Battery_Charging_Algorithm\Battery_Charge_V3\Battery_Charge_V3\API\output_Weather_{start_date_str}_file.csv"
+    observation_data_path = fr"C:\Users\user1\Desktop\Battery_Charging_Algorithm\API\Weather_{start_date_str}_file.csv"
 
 
 
@@ -139,9 +139,9 @@ else:
 
 ## 모델 학습에 필요한 예보기상데이터, 모델학습데이터 준비(루틴 2-2)
 #파일 인코딩 형식은 utf-8이 디폴트 값이며, 상황에 따라 cp949, euc-kr 활용할 것
-forecast_data_path = fr"D:\hyeonseo\Battery_Charging_Algorithm\Battery_Charge_V3\Battery_Charge_V3\API\output_forecast_{end_date_str}.csv" # 예보데이터 파일
-train_x_data_path =r"D:\hyeonseo\Battery_Charging_Algorithm\Battery_Charge_V3\Battery_Charge_V3\Battery_Charging_1_3\ver1_3\df_x_train.csv" # 모델학습 파일
-train_y_data_path =r"D:\hyeonseo\Battery_Charging_Algorithm\Battery_Charge_V3\Battery_Charge_V3\Battery_Charging_1_3\ver1_3\df_y_train.csv"
+forecast_data_path = fr"C:\Users\user1\Desktop\Battery_Charging_Algorithm\API\forecast_{end_date_str}.csv" # 예보데이터 파일
+train_x_data_path =r"C:\Users\user1\Desktop\Battery_Charging_Algorithm\df_x_train.csv" # 모델학습 파일
+train_y_data_path =r"C:\Users\user1\Desktop\Battery_Charging_Algorithm\df_y_train.csv"
 
 
 try:
@@ -556,11 +556,11 @@ tommorow_battery_charge_file = pd.DataFrame(result, index = [0]) # result를 데이
 
 try:
     
-    tommorow_battery_charge_file.to_csv(fr"D:\hyeonseo\Battery_Charging_Algorithm\Battery_Charge_V3\Battery_Charge_V3\Results\{end_date_str}_battery_charging_file.csv", index=False) # csv파일로 저장
-    print(fr"D:\hyeonseo\Battery_Charging_Algorithm\Battery_Charge_V3\Battery_Charge_V3\Results\{end_date_str}_battery_charging_file.csv")
+    tommorow_battery_charge_file.to_csv(fr"C:\Users\user1\Desktop\Battery_Charging_Algorithm\results\{end_date_str}_battery_charging_file.csv", index=False) # csv파일로 저장
+    print(fr"C:\Users\user1\Desktop\Battery_Charging_Algorithm\results\{end_date_str}_battery_charging_file.csv")
 except:
     print(f"result 파일 저장 중 에러 발생")# 오류 발생 시 에러메시지 출력
-    print(fr"D:\hyeonseo\Battery_Charging_Algorithm\Battery_Charge_V3\Battery_Charge_V3\Results\{end_date_str}_battery_charging_file.csv")
+    print(fr"C:\Users\user1\Desktop\Battery_Charging_Algorithm\results\{end_date_str}_battery_charging_file.csv")
 
 
 ###  배터리 최종 충전량 값(CoC)를 DB에 저장

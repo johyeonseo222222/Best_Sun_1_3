@@ -1,4 +1,4 @@
-# -*- coding: cp949 -*- # 파일의 인코딩형식을 첫머리에 명시해놓음으로써 인코딩 오류를 방지
+# -*- coding: utf-8 -*-   # 파일 인코딩 형식을 파일 첫머리에 명시해주어 인코딩 오류를 방지함
 
 import pandas as pd
 from haversine import haversine # pip install 필요
@@ -135,7 +135,7 @@ print(input_region_2depth_name) # 시군구 단위 행정구역 확인. 디버깅
 
 extracted_location = (input_lat,input_lon) # 추출한 위경도값을 튜플형태로 변수에 저장. 이 변수를 토대로 주어진 위치와 가장 가까운 종관 관측소 ID를 구해야 함.
 
-API_LOCATION = pd.read_csv(r"D:\hyeonseo\Battery_Charging_Algorithm\Battery_Charge_V3\Battery_Charge_V3\Battery_Charging_1_3\ver1_3\API_LOCATION_V2.csv" )
+API_LOCATION = pd.read_csv(r"C:\Users\user1\Desktop\Battery_Charging_Algorithm\API_LOCATION_V2.csv" )
 
 
 # 입력값 기준 최단거리의 종관기상 관측소 얻는 함수 
@@ -225,7 +225,7 @@ while start_date <= end_date:
 
     # 저장 경로
 
-    weather_save_file_path = fr"D:\hyeonseo\Battery_Charging_Algorithm\Battery_Charge_V3\Battery_Charge_V3\API\output_Weather_{start_date_str}_file_pre.csv" # 종관, 예보 날씨 데이터 파일들은 모두 현재날짜)_csv의 이름으로 저장됨. 
+    weather_save_file_path = fr"C:\Users\user1\Desktop\Battery_Charging_Algorithm\API\Weather_{start_date_str}_file_pre.csv" # 종관, 예보 날씨 데이터 파일들은 모두 현재날짜)_csv의 이름으로 저장됨. 
    
 
     try:
@@ -258,7 +258,7 @@ while start_date <= end_date:
 # 예보데이터관측소 얻는 함수
 
 
-API_LOCATION_FORECAST = pd.read_csv(r"D:\hyeonseo\Battery_Charging_Algorithm\Battery_Charge_V3\Battery_Charge_V3\Battery_Charging_1_3\ver1_3\API_FORECAST_REGION_V2.csv") # 예보데이터 관측소 정보를 담고 있는 파일
+API_LOCATION_FORECAST = pd.read_csv(r"C:\Users\user1\Desktop\Battery_Charging_Algorithm\API_FORECAST_REGION_V2.csv") # 예보데이터 관측소 정보를 담고 있는 파일
 
 list_east = ['강릉시', '삼척시', '태백시', '속초시', '양양군', '동해시', '고성군'] #  강원영동 예보관측소.  input_region_2depth_name에 리스트 내 포함되는 문자열이 있으면 '강원영동' 관측소를 반환함.
 list_west = ['철원군', '화천군', '양구군', '인제군', '춘천시', '홍천군', '횡성군', '원주시', '평창군', '영월군', '정선군'] # 강원영동 예보관측소.  input_region_2depth_name에 리스트 내 포함되는 문자열이 있으면 '강원영서' 관측소를 반환함.
@@ -329,7 +329,7 @@ print(url_forecast)
 
 
 # 저장 경로
-forecast_save_file_path = fr"D:\hyeonseo\Battery_Charging_Algorithm\Battery_Charge_V3\Battery_Charge_V3\API\output_forecast_{end_date_str}_pre.csv" # 종관, 예보 날씨 데이터 파일들은 모두 현재날짜)_csv의 이름으로 저장됨. 
+forecast_save_file_path = fr"C:\Users\user1\Desktop\Battery_Charging_Algorithm\API\forecast_{end_date_str}_pre.csv" # 종관, 예보 날씨 데이터 파일들은 모두 현재날짜)_csv의 이름으로 저장됨. 
 
 
 

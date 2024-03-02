@@ -1,4 +1,4 @@
-# -*- coding: cp949 -*-   # 파일 인코딩 형식을 파일 첫머리에 명시해주어 인코딩 오류를 방지함
+# -*- coding: utf-8 -*-   # 파일 인코딩 형식을 파일 첫머리에 명시해주어 인코딩 오류를 방지함
 
 import os 
 import sys
@@ -74,7 +74,7 @@ try:
         start_date += datetime.timedelta(days=1)  # 한 개의 파일 실행이 완료되면 timedelta 활용하여 다음 날짜로 이동
 except:
 
-    paths = [r"C:\Users\\user1\Desktop\Battery_Charging_Algorithm\Algorithm_1_3\API.py",r"C:\Users\user1\Desktop\Battery_Charging_Algorithm\Algorithm_1_3\API_2.py",r"C:\Users\user1\Desktop\Battery_Charging_Algorithm\Algorithm_1_3\get_battery_charge_DB.py" ]
+    paths = [r"C:\Users\user1\Desktop\Battery_Charging_Algorithm\API.py",r"C:\Users\user1\Desktop\Battery_Charging_Algorithm\API_2.py",r"C:\Users\user1\Desktop\Battery_Charging_Algorithm\get_battery_charge_DB.py" ]
 
     while start_date <= end_date: #현재날짜가 종료날짜에 도달할 떄까지
           for path in paths:# 실행할 py파일들에 대해서
@@ -84,4 +84,3 @@ except:
 
  
 print(sys.argv)
-print('chainsmokers')
